@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #050210;
+        }
+        #circle-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            margin: 0px auto 0px auto;
+            position: relative;
+            bottom: 400px;
+        }
+        #circle-2 {
+            width: 350px;
+            height: 350px;
+            background-color: black;
+            border-radius: 100%;
+            transform: translateX(25px) translateY(25px);
+        }
+        #circle-3 {
+            width: 350px;
+            height: 350px;
+            background-color:rgb(5, 4, 32);
+            border-radius: 100%;
+            position: relative;
+            bottom: 775px;
+            margin: 0px auto;
+        }
+        #glow {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            filter: blur(50px);
+            margin: 150px auto 0 auto;
+            
+            animation-name: rotation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .rotate {
+            animation-name: rotation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+        .pulse {
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes pulse {
+            from {
+                transform: scale(0,0);
+            }
+            to {
+                transform: scale(1,1);
+            }
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="glow">
+
+    </div>
+        <div class="rotate" id="circle-1">
+            <div id="circle-2">
+            </div>    
+        </div>
+        <div class="pulse" id="circle-3">
+        </div>
+        
+</body>
+</html>
